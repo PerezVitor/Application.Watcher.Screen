@@ -1,0 +1,26 @@
+﻿<div class="text-center">
+    <label class="display-5">Logs</label>
+</div>
+
+<table id="log-datatable" class="table table-striped table-bordered dt-responsive nowrap" width="100%">
+    <thead>
+        <tr>
+            <th> Cycle Id </th>
+            <th> Application Name </th>
+            <th> Create Date </th>
+            <th> Timestamp </th>
+            <th> Log Level </th>
+            <th> Message </th>
+            <th> Calling From </th>
+            <th> Calling Method </th>
+            <th> Line Number </th>
+            <th> Request </th>
+            <th> Response </th>
+            <th> Exception </th>
+        </tr>
+    </thead>
+</table>
+
+@section Scripts {
+    <script type="module" src="~/js/tables/log.js" asp-append-version="true"></script>
+}
