@@ -1,4 +1,4 @@
-using Painel.Infra.IoC;
+using Bussiness.Infra.IoC;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,7 +1,7 @@
 ﻿using System.Data.Common;
 using Microsoft.AspNetCore.Mvc;
-using Painel.Application.DTOs;
-using Painel.Application.Interfaces;
+using Bussiness.Application.DTOs;
+using Bussiness.Application.Interfaces;
 
 namespace Painel.Controllers;
 [Route("api/exception")]
@@ -13,18 +13,18 @@ public class ExceptionController : BaseController
     [HttpPost("get-all")]
     public async Task<IActionResult> GetAll()
     {
-        try 
+        try
         {
             var output = await _service.GetAll(skip, pageSize);
             output.FormatOutput(draw);
 
             return Ok(output);
         }
-        catch(DbException)
+        catch (DbException)
         {
             return StatusCode(500, new ExceptionOutput());
         }
-        catch(Exception)
+        catch (Exception)
         {
             return StatusCode(500, new ExceptionOutput());
         }

@@ -1,7 +1,7 @@
 using System.Data.Common;
 using Microsoft.AspNetCore.Mvc;
-using Painel.Application.DTOs;
-using Painel.Application.Interfaces;
+using Bussiness.Application.DTOs;
+using Bussiness.Application.Interfaces;
 
 namespace Painel.Controllers;
 [Route("api/request")]

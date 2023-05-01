@@ -18,6 +18,12 @@ public class WatcherController : Controller
     [HttpGet("Exceptions")]
     public IActionResult GetAllExceptions() => View("ExceptionDataTable");
 
+    [HttpPost]
+    public IActionResult Details(string customerId)
+    {
+        return View("Details");
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
