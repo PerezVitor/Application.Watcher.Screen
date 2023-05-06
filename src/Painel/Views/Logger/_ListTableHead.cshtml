@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Painel.Domain.Entities.LoggerModel>
+
+<thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Message)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CallingFrom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CallingMethod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LineNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LogLevel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateTimestamp)
+        </th>
+        @await Html.PartialAsync("_ListTableHeadComom")
+    </tr>
+</thead>

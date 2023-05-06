@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Painel.Domain.Entities.ExceptionModel>
+<thead class="thead-dark">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Message)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TypeOf)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Source)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Path)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Method)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOcurredAt)
+        </th>
+        @await Html.PartialAsync("_ListTableHeadComom")
+    </tr>
+</thead>

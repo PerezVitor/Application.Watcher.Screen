@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Painel.Domain.Entities.ResponseModel>
+
+<thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ResponseBody)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResponseStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Headers)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateFinishTime)
+        </th>
+        @await Html.PartialAsync("_ListTableHeadComom")
+    </tr>
+</thead>

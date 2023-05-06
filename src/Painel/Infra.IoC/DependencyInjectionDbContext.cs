@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Painel.Domain.Interfaces;
 using Painel.Infra.Data.Context;
-using Painel.Infra.Data.Interfaces;
 using Painel.Infra.Data.Repositories;
 
 namespace Painel.Infra.IoC;

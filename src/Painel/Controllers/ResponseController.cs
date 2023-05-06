@@ -1,32 +1,8 @@
-using System.Data.Common;
-using Microsoft.AspNetCore.Mvc;
-using Painel.Application.DTOs;
-using Painel.Application.Interfaces;
+﻿using Painel.Domain.Entities;
+using Painel.Domain.Interfaces;
 
 namespace Painel.Controllers;
-[Route("api/response")]
-public class ResponseController : BaseController
+public class ResponseController : BaseController<ResponseModel>
 {
-    private readonly IResponseService _responseService;
-    public ResponseController(IResponseService responseService) => _responseService = responseService;
-
-    [HttpPost("get-all")]
-    public async Task<IActionResult> GetAll()
-    {
-        try
-        {
-            var output = await _responseService.GetAll(skip, pageSize);
-            output.FormatOutput(draw);
-
-            return Ok(output);
-        }
-        catch (DbException)
-        {
-            return StatusCode(500, new ResponseOutput());
-        }
-        catch (Exception)
-        {
-            return StatusCode(500, new ResponseOutput());
-        }
-    }
+    public ResponseController(IResponseRepository repository) : base(repository) { }
 }

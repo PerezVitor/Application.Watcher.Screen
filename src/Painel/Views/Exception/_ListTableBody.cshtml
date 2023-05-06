@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Painel.Domain.Entities.ExceptionModel>
+
+<tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeOf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Source)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Path)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Method)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOcurredAt)
+            </td>
+            @await Html.PartialAsync("_ListTableBodyComom", item)
+        </tr>
+    }
+</tbody>

@@ -16,7 +16,4 @@ public class ExceptionModel : BaseModel
     [Column("OcurredAt")]
     [JsonIgnore]
     public DateTime DateOcurredAt { get; set; }
-
-    [NotMapped]
-    public string OcurredAt { get; set; }
 }

@@ -1,0 +1,14 @@
+﻿@model Painel.Domain.Entities.BaseModel
+
+<td>
+    @Html.DisplayFor(model => model.CycleId)
+</td>
+<td>
+    @Html.DisplayFor(model => model.ApplicationName)
+</td>
+<td>
+    @Html.DisplayFor(model => model.Date)
+</td>
+<td>
+    <a class="btn btn-primary" asp-action="Details" asp-route-id="@Model.Id">Details</a>
+</td>

@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Painel.Domain.Entities.LoggerModel>
+
+<tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CallingFrom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CallingMethod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LineNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogLevel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateTimestamp)
+            </td>
+            @await Html.PartialAsync("_ListTableBodyComom", item)
+        </tr>
+    }
+</tbody>

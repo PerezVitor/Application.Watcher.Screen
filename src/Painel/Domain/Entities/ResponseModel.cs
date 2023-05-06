@@ -11,7 +11,4 @@ public class ResponseModel : BaseModel
     [Column("FinishTime")]
     [JsonIgnore]
     public DateTime DateFinishTime { get; set; }
-
-    [NotMapped]
-    public string FinishTime { get; set; }
 }

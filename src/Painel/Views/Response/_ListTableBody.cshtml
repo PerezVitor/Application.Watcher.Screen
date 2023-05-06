@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Painel.Domain.Entities.ResponseModel>
+
+<tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResponseBody)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResponseStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Headers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateFinishTime)
+            </td>
+            @await Html.PartialAsync("_ListTableBodyComom", item)
+        </tr>
+    }
+</tbody>

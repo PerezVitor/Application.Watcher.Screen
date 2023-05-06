@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Painel.Domain.Entities.RequestModel>
+
+<thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestBody)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QueryString)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Path)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Headers)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Method)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Host)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IpAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateStartTime)
+        </th>
+        @await Html.PartialAsync("_ListTableHeadComom")
+    </tr>
+</thead>

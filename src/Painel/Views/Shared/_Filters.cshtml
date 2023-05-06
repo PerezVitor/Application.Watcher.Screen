@@ -1,0 +1,29 @@
+﻿<form method="post" action="@Url.Action("List")">
+    <label for="pageSize">Page Size:</label>
+    <select id="pageSize" name="pageSize">
+        <option value="10">10</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+        <option value="1000">1000</option>
+    </select>
+
+    <label for="cycleId">CycleId:</label>
+    <input type="text" id="cycleId" name="cycleId" value="@ViewBag.CycleId" />
+
+    <label for="initialDate">Initial Date:</label>
+    <input type="text" id="initialDate" name="initialDate" value="@ViewBag.InitialDate" />
+
+    <label for="finalDate">Final Date:</label>
+    <input type="text" id="finalDate" name="finalDate" value="@ViewBag.FinalDate" />
+
+    <button type="submit">Search</button>
+</form>
+
+<hr />
+
+<script>
+    var pageSize = @Html.Raw(Json.Serialize(ViewBag.PageSize ?? 10));
+    var select = document.getElementById("pageSize");
+    select.value = pageSize.toString();
+</script>

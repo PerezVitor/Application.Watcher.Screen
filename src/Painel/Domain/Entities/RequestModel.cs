@@ -15,7 +15,4 @@ public class RequestModel : BaseModel
     [Column("StartTime")]
     [JsonIgnore]
     public DateTime DateStartTime { get; set; }
-
-    [NotMapped]
-    public string StartTime { get; set; }
 }

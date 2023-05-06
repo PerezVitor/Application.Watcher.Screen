@@ -8,12 +8,9 @@ public abstract class BaseModel
     [Key]
     public long Id { get; set; }
     public Guid CycleId { get; set; }
-    public string ApplicationName { get; set; }
+    public string? ApplicationName { get; set; }
     
     [Column("CreateDate")]
     [JsonIgnore]
     public DateTime Date { get; set; }
-
-    [NotMapped]
-    public string CreateDate { get; set; }
 }

@@ -1,0 +1,83 @@
+﻿@model Painel.Domain.Entities.RequestModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>RequestModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RequestBody)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RequestBody)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.QueryString)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.QueryString)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Path)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Path)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Headers)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Headers)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Method)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Method)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Host)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Host)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IpAddress)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IpAddress)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DateStartTime)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DateStartTime)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CycleId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CycleId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ApplicationName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ApplicationName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="List">Back to List</a>
+</div>

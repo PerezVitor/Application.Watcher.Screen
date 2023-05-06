@@ -13,7 +13,4 @@ public class LoggerModel : BaseModel
     [Column("Timestamp")]
     [JsonIgnore]
     public DateTime DateTimestamp { get; set; }
-
-    [NotMapped]
-    public string Timestamp { get; set; }
 }
