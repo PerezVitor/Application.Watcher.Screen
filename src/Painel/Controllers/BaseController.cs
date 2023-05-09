@@ -39,9 +39,13 @@ public abstract class BaseController<TClass> : Controller where TClass : BaseMod
 
     private async Task<List<TClass>> GetItensToShow(Filter filter)
     {
-        return FilterModel?.HasFilters() == true
-            ? await _repository.GetAllFiltered(FilterModel.GetStartItem(), filter.pageSize, FilterModel.GetFilters<TClass>())
-            : await _repository.GetAll(FilterModel.GetStartItem(), filter.pageSize);
+        int skip = FilterModel.GetStartItem();
+        int take = filter.pageSize;
+
+        if (FilterModel.HasFilters())
+            return await _repository.GetAllFiltered(skip, take, FilterModel.GetFilters<TClass>());
+
+        return await _repository.GetAll(skip, take);
     }
 
     private async Task<int> GetTotalItens()
